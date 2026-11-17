@@ -1,0 +1,95 @@
+.wrapper{
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.177);
+    align-items: center;
+    z-index: 7;
+
+    .insideWrapper{
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.leftPart{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(99, 99, 99, 0);
+    display: flex;
+    align-items: center;
+    
+    .linkWrap{
+        
+        .avatar{
+            width: min-content;
+            display: flex;
+            text-align: center;
+            align-items: center;
+
+            .avatarPL{
+                font-size: 3.9vw;
+                font-weight: 700;
+                margin: 0;
+                letter-spacing: 0.5px;
+                line-height: 1;
+                text-transform: uppercase;
+                color: #000000;
+                font-style: italic;
+                // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            .avatarPR{
+                font-size: 3.9vw;
+                font-weight: 700;
+                margin-left: -0.4vw;
+                letter-spacing: 0.5px;
+                line-height: 1;
+                text-transform: uppercase;
+                color: #000000;
+                transform: skewX(10deg)
+                // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            .logo{
+                width: 3.4vw;
+                height: 3.4vw;
+                background: url(../../../../public/components/layout/Header/ai-black.svg) no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+    
+}
+
+.rightPart{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(74, 74, 74, 0);
+
+    .navbar{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        .link{
+            font-size: 1.2vw;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #000000;
+
+            text-decoration: none;
+        }
+    }
+}

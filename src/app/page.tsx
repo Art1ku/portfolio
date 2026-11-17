@@ -1,10 +1,11 @@
-import styles from "./page.module.css";
+import classes from "./page.module.scss"
+import MainPage from "@/components/pagesComp/MainPage/MainPage"
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-       
+    <div className={classes.page}>
+      <main className={classes.main}>
+        <MainPage />
       </main>
     </div>
   );
