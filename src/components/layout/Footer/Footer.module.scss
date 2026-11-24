@@ -1,5 +1,145 @@
-.wrapper{
+.wrapper {
     width: 100%;
-    height: 30vh;
+    min-height: 200px;
     background: rgb(37, 37, 37);
+    color: #9aa2b1;
+    display: flex;
+    align-items: center;
+
+    .insideWrapper {
+        width: 100%;
+        padding: 45px 0;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: end;
+        gap: 20px;
+
+        .left {
+            justify-self: start;
+
+            .topUpButton {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                background: none;
+                border: none;
+                color: #cfd6e4;
+                font-size: 14px;
+                cursor: pointer;
+                padding: 0;
+                transition: opacity 0.2s;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                .topArrow {
+                    width: 12px;
+                    height: 12px;
+                    background-color: #cfd6e4;
+                    -webkit-mask: url("/components/layout/Footer/chevron-up-xs-svgrepo-com.svg") no-repeat center / contain;
+                    mask: url("/components/layout/Footer/chevron-up-xs-svgrepo-com.svg") no-repeat center / contain;
+                }
+            }
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+
+            .top {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .logo {
+                    width: 48px;
+                    height: 48px;
+                    background: url("/components/layout/Footer/ai-white.svg") no-repeat center / contain;
+                }
+
+                .titleP {
+                    margin: 0;
+                    font-size: 28px;
+                    font-weight: 600;
+                    color: #cfd6e4;
+                    letter-spacing: 0.5px;
+                }
+            }
+
+            .bottom {
+                .linkIconsBar {
+                    display: flex;
+                    align-items: center;
+                    gap: 28px;
+
+                    a {
+                        width: 22px;
+                        height: 22px;
+                        display: block;
+                        background-color: #9aa2b1;
+                        transition: background-color 0.2s ease, transform 0.2s ease;
+
+                        -webkit-mask-repeat: no-repeat;
+                        -webkit-mask-position: center;
+                        -webkit-mask-size: contain;
+                        mask-repeat: no-repeat;
+                        mask-position: center;
+                        mask-size: contain;
+
+                        &:hover {
+                            background-color: #ffffff;
+                            transform: translateY(-2px);
+                        }
+                    }
+
+                    .whatsapp {
+                        -webkit-mask-image: url("/components/layout/Footer/whatsapp-svgrepo-com.svg");
+                        mask-image: url("/components/layout/Footer/whatsapp-svgrepo-com.svg");
+                    }
+
+                    .linked {
+                        -webkit-mask-image: url("/components/layout/Footer/linkedin-svgrepo-com.svg");
+                        mask-image: url("/components/layout/Footer/linkedin-svgrepo-com.svg");
+                    }
+
+                    .telegram {
+                        -webkit-mask-image: url("/components/layout/Footer/paper-plane-svgrepo-com.svg");
+                        mask-image: url("/components/layout/Footer/paper-plane-svgrepo-com.svg");
+                    }
+
+                    .github {
+                        -webkit-mask-image: url("/components/layout/Footer/github-svgrepo-com.svg");
+                        mask-image: url("/components/layout/Footer/github-svgrepo-com.svg");
+                    }
+                }
+            }
+        }
+
+        .right {
+            justify-self: end;
+
+            .license {
+                margin: 0;
+                font-size: 14px;
+                color: #8c95a6;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper .insideWrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 32px;
+
+        .left,
+        .right {
+            justify-self: center;
+        }
+    }
 }
